@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!--TODO: Replace 'LinearLayout' in the root with whatever layout or scrollview you choose-->
+    <!--TODO: add any addtional layouts-->
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+        <FrameLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center">
+
+            <csc472.depaul.edu.homeworksix.RemoteDisc
+
+                android:id="@+id/remote_disc"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/remote_disc_inactive"
+                android:layout_gravity="center"/>
+            <csc472.depaul.edu.homeworksix.ColorButton
+                android:id="@+id/center_yellow_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="@string/center_yellow_button"/>
+
+
+        </FrameLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_gravity="center">
+
+
+            <csc472.depaul.edu.homeworksix.ColorButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/red_button"/>
+            <csc472.depaul.edu.homeworksix.ColorButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/green_button"/>
+
+            <csc472.depaul.edu.homeworksix.ColorButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/yellow_button"/>
+            <csc472.depaul.edu.homeworksix.ColorButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/blue_button"/>
+
+        </LinearLayout>
+
+        <csc472.depaul.edu.homeworksix.Television
+            android:id="@+id/tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/cartoons"
+            android:layout_gravity="center"/>
+
+
+    </LinearLayout>
+
+
+    </ScrollView>
+</LinearLayout>
