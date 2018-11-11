@@ -53,20 +53,11 @@ public class RemoteDisc extends android.support.v7.widget.AppCompatButton implem
             {
                 case MotionEvent.ACTION_DOWN:
                 {
-                    //TODO:You should take the x and y value of event and pass it to getRemoteButton
-                    //TODO: this method will tell you what button to display
                     REMOTE_DISC_BUTTON rdb = getRemoteButton(event.getX(), event.getY());
-
-
-                    //TODO:You should think about setting your background resource at this point
                     Log.v("Touch_", rdb.name());
 
                     int imageId = getImageId(rdb);
-
                     setBackgroundResource(imageId);
-
-
-                    //TODO:don't forget to notify any observer on the button click
                     notifyRemoteDiscObservers(rdb);
                     bOnTouch = true;
                 }
@@ -74,7 +65,6 @@ public class RemoteDisc extends android.support.v7.widget.AppCompatButton implem
 
                 case MotionEvent.ACTION_UP:
                 {
-                    //TODO: you want to set your button back to the inactive state
                     setBackgroundResource(R.drawable.remote_disc_inactive);
                     bOnTouch = true;
                 }
@@ -108,62 +98,56 @@ public class RemoteDisc extends android.support.v7.widget.AppCompatButton implem
         return remoteDiscButton;
     }
 
-    //here is an method you can finish if you want to complete it - this will take a button and give the correct image
     private int getImageId(REMOTE_DISC_BUTTON remoteDiscButton)
     {
-        int nImageId = R.drawable.remote_disc_inactive;//TODO
+        int nImageId = R.drawable.remote_disc_inactive;
 
         switch (remoteDiscButton)
         {
             case LEFT:
-                nImageId = R.drawable.remote_disc_left_pressed;//TODO
+                nImageId = R.drawable.remote_disc_left_pressed;
             break;
 
             case UP:
-                nImageId = R.drawable.remote_disc_up_pressed;//TODO
+                nImageId = R.drawable.remote_disc_up_pressed;
             break;
 
             case RIGHT:
-                nImageId = R.drawable.remote_disc_right_pressed;//TODO
+                nImageId = R.drawable.remote_disc_right_pressed;
             break;
 
             case DOWN:
-                nImageId = R.drawable.remote_disc_down_pressed;//TODO
+                nImageId = R.drawable.remote_disc_down_pressed;
             break;
         }
 
         return nImageId;
     }
 
-    //TODO: finish the observer to notify the client of what to do
     private void notifyRemoteDiscObservers(REMOTE_DISC_BUTTON remoteDiscButton)
     {
         switch (remoteDiscButton)
         {
             case LEFT:
             {
-                //TODO: left is channel down
                 iRemoteDiscObserver.channelDown();
             }
             break;
 
             case RIGHT:
             {
-                //TODO: left is channel up
                 iRemoteDiscObserver.channelUp();
             }
             break;
 
             case UP:
             {
-                //TODO: left is volume up
                 iRemoteDiscObserver.volumeUp();
             }
             break;
 
             case DOWN:
             {
-                //TODO: left is volume down
                 iRemoteDiscObserver.volumeDown();
             }
             break;

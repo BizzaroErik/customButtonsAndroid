@@ -1,4 +1,7 @@
 <resources>
     <string name="app_name">HomeworkSix</string>
     <string name="center_yellow_button">OK</string>
+
+    <string name="create_new_pin">Please create a 4-digit pin:</string>
+    <string name="enter_existing_pin">Please enter 4-digit pin:</string>
 </resources>

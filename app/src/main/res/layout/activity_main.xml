@@ -3,8 +3,6 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <!--TODO: Replace 'LinearLayout' in the root with whatever layout or scrollview you choose-->
-    <!--TODO: add any addtional layouts-->
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent">

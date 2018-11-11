@@ -29,6 +29,9 @@ public class Television extends android.support.v7.widget.AppCompatImageView imp
         this.currentResource = nDrawableId;
         setBackgroundResource(nDrawableId);
     }
+    public int getCurrentResource(){
+        return currentResource;
+    }
 
     public void channelDown(){
         switch (currentResource){

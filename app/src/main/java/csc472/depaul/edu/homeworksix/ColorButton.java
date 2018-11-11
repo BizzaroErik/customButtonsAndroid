@@ -60,7 +60,6 @@ public class ColorButton extends android.support.v7.widget.AppCompatButton imple
 
                 case MotionEvent.ACTION_UP:
                 {
-                    //TODO: you want to set your button back to the inactive state
                     setBackgroundResource(onUP);
                     bOnTouch = true;
                 }
